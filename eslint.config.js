@@ -36,6 +36,17 @@ module.exports = [
     }
   },
   {
+      files: ['jest.setup.js'],
+      languageOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'commonjs',
+        globals: {
+          ...globals.node,
+          ...globals.jest
+        }
+      }
+    },
+  {
     files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}'],
     plugins: {
       react,
